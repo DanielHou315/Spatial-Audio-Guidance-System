@@ -1,5 +1,5 @@
 # Spatial Audio Guidance System (SAGS)
-A Guiding system prototype for visually impaired using spatial audio.
+A guiding system prototype for the visually-impaired using spatial audio.
 
 # Features
 This program uses a ZED 2 camera to detect objects and their spatial positions. Then, OpenAL renders spatial audio signals that indicates the position of the objects detected.
@@ -22,9 +22,9 @@ To achieve outdoor mobility, a mobile power supply is required to power Jetson X
 To immerse in a spatial audio environment, a dual-channel headphone is required. Both bluetooth and wired USB headphones have been used for this project. 
 
 # Software
-This program is developed primarily with Python, ZED SDK, and OpenAL.
+This program is developed primarily with ZED SDK and OpenAL.
 
-The audio framework of this program is programmed in C++, while the video handling is in Python. This is to enable future expandability of object recognition models in Python, such as YOLO integration. 
+The audio framework of this program is programmed in C++, and the video part in Python. This is to enable future expandability of object recognition models in Python, such as YOLO integration. 
 
 
 # Setup
