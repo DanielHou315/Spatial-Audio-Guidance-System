@@ -1,6 +1,12 @@
 # Spatial Audio Guidance System (SAGS)
-A Guiding system prototype for visually impaired using spatial audio.\
-Here is a Demonstration video. 
+A Guiding system prototype for visually impaired using spatial audio.
+
+# Features
+This program uses a ZED 2 camera to detect objects and their spatial positions. Then, OpenAL renders spatial audio signals that indicates the position of the objects detected.
+
+On a Jetson Xavier NX, this program can update all object positions 20-30 times per second, and it will detect people, cars, trucks, buses, bicycles, motorcycles, cats, and dogs, using the built-in object detection module. The maximum detection distance is 35 meters, which should leave sufficient time for users to react to signals.
+
+One limitation of the program is that it currently lacks any filtering algorithm to choose which objects to render and which not. In crowded scenes, where multiple people or cars pass by, this program could fail or generate audio that is indistinguishable. Future research into prioritizing rendering sequence may resolve the problem. 
 
 
 # Hardware
@@ -17,7 +23,8 @@ To achieve outdoor mobility, a mobile power supply is required to power Jetson X
 To immerse in a spatial audio environment, a dual-channel headphone is required. Both bluetooth and wired USB headphones have been used for this project. 
 
 # Software
-This program is developed primarily with Python, ZED SDK, and OpenAL.\
+This program is developed primarily with Python, ZED SDK, and OpenAL.
+
 The audio framework of this program is programmed in C++, while the video handling is in Python. This is to enable future expandability of object recognition models in Python, such as YOLO integration. 
 
 
@@ -46,14 +53,19 @@ g++ -shared -fPIC -o audio.so SoundSource.cpp SoundBuffer.cpp AudioModule.cpp -l
 python3 main.py
 ```
 ## Recording
-For the purpose of creating a demo, I enabled the recording feature in this program.\
-Every recording will be saved in the Recordings folder as a .svo file.\
-To export .svo to .avi, follow instructions on [Stereolabs Support](https://support.stereolabs.com/hc/en-us/articles/360009986754-How-do-I-convert-SVO-files-to-AVI-or-image-depth-sequences-).\
-The audio recording of the demonstration video is achieved separately through Audacity.\
+For the purpose of creating a demo, I enabled the recording feature in this program.
+
+Every recording will be saved in the Recordings folder as a .svo file.
+
+To export .svo to .avi, follow instructions on [Stereolabs Support](https://support.stereolabs.com/hc/en-us/articles/360009986754-How-do-I-convert-SVO-files-to-AVI-or-image-depth-sequences-).
+
+The audio recording of the demonstration video is achieved separately through Audacity.
 
 To turn recording off, comment out the function "enable_recording()" in line 169 of main.py.
 
 # Acknowledgement
-The project is not possible without the supported of Mr. Hou and Ms. Zhang.\
-The OpenAL framework of this project is based on the work of Youtuber "Code, Tech, and Tutorials". Check out his channel [here](https://www.youtube.com/c/CodeTechandTutorials) and his code repository [here](https://github.com/codetechandtutorials/openal-impl).\
+The project is not possible without the supported of Mr. Hou and Ms. Zhang.
+
+The OpenAL framework of this project is based on the work of Youtuber "Code, Tech, and Tutorials". Check out his channel [here](https://www.youtube.com/c/CodeTechandTutorials) and his code repository [here](https://github.com/codetechandtutorials/openal-impl).
+
 The power supply that enabled outdoor testing of this program is sponsored by the Haverford School Science Department. 
