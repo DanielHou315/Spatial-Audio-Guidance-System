@@ -16,10 +16,9 @@ The development and execution of SAGS is done on [Nvidia Jetson Xavier NX platfo
 ## Stereolabs ZED 2 Stereo Camera
 The depth sensing and object detection are empowered by a single [ZED 2 camera](https://www.stereolabs.com/zed-2/). The ZED 2 camera requires CUDA to achieve some of its features, so a CUDA-enabled Jetson board or Nvidia graphics card is required by this program. 
 
-## Power
+## Other Hardware
 To achieve outdoor mobility, a mobile power supply is required to power Jetson Xavier NX. No extra power supply is needed if the program runs on a notebook. 
 
-## Headphone
 To immerse in a spatial audio environment, a dual-channel headphone is required. Both bluetooth and wired USB headphones have been used for this project. 
 
 # Software
@@ -59,7 +58,6 @@ Every recording will be saved in the Recordings folder as a .svo file.
 
 To export .svo to .avi, follow instructions on [Stereolabs Support](https://support.stereolabs.com/hc/en-us/articles/360009986754-How-do-I-convert-SVO-files-to-AVI-or-image-depth-sequences-).
 
-The audio recording of the demonstration video is achieved separately through Audacity.
 
 To turn recording off, comment out the function "enable_recording()" in line 169 of main.py.
 
