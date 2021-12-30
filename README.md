@@ -1,6 +1,8 @@
 # Spatial Audio Guidance System (SAGS)
 A guiding system prototype for the visually-impaired using spatial audio.
 
+Please take a look at the program demonstration here: https://youtu.be/5KMiXsBnYDU
+
 # Features
 This program uses a ZED 2 camera to detect objects and their spatial positions. Then, OpenAL renders spatial audio signals that indicates the position of the objects detected.
 
