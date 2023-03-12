@@ -3,6 +3,8 @@ A guiding system prototype for the visually-impaired using spatial audio.
 
 Please take a look at the program demonstration here: https://youtu.be/5KMiXsBnYDU
 
+Update: Shout out to [this paper by Dr. Schwarze, Dr. Lauer, et al](https://link.springer.com/article/10.1007/s13218-015-0407-7). The authors designed a very similar system but with more scientific/experimental methods and more detailed documentations to the design choices. 
+
 # Features
 This program uses a ZED 2 camera to detect objects and their spatial positions. Then, OpenAL renders spatial audio signals that indicates the position of the objects detected.
 
